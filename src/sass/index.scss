@@ -1,2 +1,8 @@
 @import './common';
 @import './example';
+
+// * default styles and utils
+@import './basis/default';
+@import './basis/reset';
+@import './basis/var';
+@import './utils/mixin';
