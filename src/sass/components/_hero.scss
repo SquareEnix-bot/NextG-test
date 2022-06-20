@@ -1,0 +1,56 @@
+.hero {  
+
+  .flex-container {
+    display: flex;
+  }
+  
+  &::after {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    content: '';
+    @include side-sizes(927px, 891px);
+
+    // ! тимчасове рішення, виправити 
+    max-width: 48%;
+    
+    background-image: url('../images/hero-bg.png');
+    
+  }
+}
+
+.hero__left {
+  padding-top: 157px;
+  max-width: 555px;
+}
+
+.hero__right {
+  margin-left: auto;
+}
+
+.hero__subtitle {
+  margin-bottom: 30px;
+  @include font-normal($font-family: 'Rubik', $font-weight: 500, $color: $accent-color);    
+  font-size: 14px;
+  line-height: 2.14;
+  
+}
+
+.hero__title {
+  margin-bottom: 40px;
+  @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);    
+  font-size: 72px;
+  line-height: 1.14;  
+}
+
+.hero__desc {
+  margin-bottom: 54px;
+  @include font-normal($color: $font-dark-color);  
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hero__btns {
+  @include flex-gap($justify-content: flex-start, $gap: 20px);
+}
