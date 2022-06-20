@@ -1,6 +1,5 @@
 // * transition
-$time: 250ms;
-$functional-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 // * fonts
 $font-primary: 'Open Sans';

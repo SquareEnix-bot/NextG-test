@@ -2,10 +2,14 @@
 @import './example';
 
 // * default styles and utils
-@import './basis/default';
-@import './basis/reset';
-@import './basis/var';
+@import './base/var';
+
 @import './utils/mixin';
+@import './utils/placeholder';
+
+@import './base/default';
+@import './base/reset';
+
 
 // * conponents
 @import './components/header';
