@@ -1,5 +1,5 @@
 body {
-  @include font-normal;
+  @include font-normal; 
 }
 
 
@@ -9,6 +9,8 @@ body {
   min-width: 320px;
   width: 1200px;
   
+
+  @extend %outline;
   // @media screen and (min-width: 480px) {
   //   width: 480px;
   // }

@@ -1,26 +1,42 @@
-.header {  
+.header {    
   padding-top: 20px;
-  padding-bottom: 80px;
-  
-  @extend %outline;
+  padding-bottom: 77px;  
+  background-color: $section-bg;  
 
-  .flex-container {
-    @include flex-3in1;
-  }
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    // z-index: -1;
+    content: '';
+    @include side-sizes(927px, 891px);
+  
+    // ! тимчасове рішення, виправити    
+    max-width: 47.5%;
+  
+    background-image: url('../images/hero/hero-bg.png');      
+    }
+
+  .container {
+    @include flex-3in1;    
+  }  
 }
 
 .header__logo {
   margin-right: auto;
+  z-index: 1;
   @include side-sizes(161px, 40px);
   background-color: $place-logo-color;
 }
 
 .nav {
-  margin-right: 45px;
+  margin-right: 45px;  
+  z-index: 1;
 }
 
 .nav__list {
   @include flex-gap($gap: 45px);
+  z-index: 10;
 }
 
 // TODO додати анімашку, можлм=иво риску під назвою
@@ -39,4 +55,8 @@
   &:focus {
     color: $font-dark-color;
   }
+}
+
+.header__btn {
+  z-index: 1;
 }
