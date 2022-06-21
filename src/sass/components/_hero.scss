@@ -1,23 +1,9 @@
 .hero {  
+  background-color: $section-bg;
 
   .flex-container {
     display: flex;
-  }
-  
-  &::after {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    content: '';
-    @include side-sizes(927px, 891px);
-
-    // ! тимчасове рішення, виправити 
-    max-width: 48%;
-    
-    background-image: url('../images/hero-bg.png');
-    
-  }
+  }   
 }
 
 .hero__left {
@@ -27,6 +13,7 @@
 
 .hero__right {
   margin-left: auto;
+  z-index: 1;
 }
 
 .hero__subtitle {
