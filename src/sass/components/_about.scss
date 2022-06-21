@@ -1,0 +1,41 @@
+.about {
+  padding-top: 80px;
+}
+
+.about__item {
+  @include flex-3in1($justify-content: space-between);
+  flex-basis: 50%;
+
+  &:not(last-child) {
+    margin-bottom: 80px;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse
+  }
+}
+
+.about__left {
+  max-width: 523px;
+}
+
+.about__title {
+  padding-top: 10px;
+  padding-bottom: 26px;
+  @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);
+  font-size: 48px;
+  line-height: 1.04;  
+}
+
+.about__desc {    
+  font-size: 16px;
+  line-height: 1.88;
+
+  & +.about__desc {
+    margin-top: 30px;
+  }
+  
+  &--bold {
+    font-weight: 700;
+  }  
+}
