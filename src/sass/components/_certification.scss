@@ -1,0 +1,52 @@
+.certification {
+  .container {
+    @include flex-3in1($justify-content: flex-start);    
+  }
+}
+
+.certification__title {
+  position: relative;
+  @include font-normal;
+  font-size: 15px;
+  line-height: 1.6;
+
+  &::after {
+    position: absolute;
+    margin-left: 16px;
+    @include side-sizes(147px, 1px);    
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    background-color: $accent-color;
+  }
+} 
+
+.certification__list {
+  margin-left: 250px;
+  @include flex-gap($gap: 100px);
+}
+
+.certification__item {
+  @include flex-3in1;
+
+  &:nth-child(1) {
+    .certification__link {
+      @include side-sizes(66.78px, 80px);
+      background-image: url('../images/certification/fda.png');
+    }
+  }
+
+  &:nth-child(2) {
+    @include side-sizes(126.01px, 80px);
+    background-image: url('../images/certification/nelson.png');
+  }
+
+  &:nth-child(3) {
+    @include side-sizes(104.82px, 80px);
+    background-image: url('../images/certification/cnas.png');
+  }
+}
+
+.certification__link {
+  display: inline-block;
+}
