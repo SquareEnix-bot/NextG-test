@@ -1,6 +1,6 @@
 .header {    
   padding-top: 20px;
-  padding-bottom: 77px;  
+  padding-bottom: 81px;  
   background-color: $section-bg;  
 
   &::after {
@@ -24,9 +24,7 @@
 
 .header__logo {
   margin-right: auto;
-  z-index: 1;
-  @include side-sizes(161px, 40px);
-  background-color: $place-logo-color;
+  z-index: 1;  
 }
 
 .nav {

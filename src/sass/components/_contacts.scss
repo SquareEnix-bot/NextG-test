@@ -1,4 +1,6 @@
 .contacts {
+  padding-top: 41px;
+  padding-bottom: 39px;
   background-color: $accent-color;
 }
 
@@ -61,13 +63,14 @@
 }
 
 .contacts__title {  
+  margin-bottom: 1px;
   @include font-normal($font-family: 'Rubik', $font-weight: 500, $color: $font-dark-color);   
   font-size: 20px;
-  line-height: 1.5;    
+  line-height: 1.55;    
 }
 
 .contacts__link {
   @include font-normal($color: $font-dark-color);
   font-size: 15px;
-  line-height: 1.33;  
+  line-height: 1.4;  
 }
