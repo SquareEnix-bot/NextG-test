@@ -1,6 +1,18 @@
 .info {
+  position: relative;
+
   .container {
     display: flex;
+  }
+
+  &::after {
+    position: absolute;
+    @include side-sizes(100%, 1614px);
+    z-index: -1;
+    top: 50%;
+    content: '';
+    border-bottom-left-radius: 150px;
+    background-color: $section-bg;
   }
 }
 
@@ -20,8 +32,8 @@
   }
 }
 
-.info__right {
-  max-width: 570px;
+.info__right {  
+  max-width: 570px;  
 }
 
 .info__list {
@@ -29,9 +41,9 @@
   flex-wrap: wrap;
 }
 
-.info__item {
+.info__item {  
   &:nth-child(1) {
-    @extend %outline;
+    background-color: $font-white-color;
   }
 
   &:nth-child(2) {

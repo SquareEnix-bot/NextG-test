@@ -1,0 +1,95 @@
+.reasons {
+  .container {
+    display: flex;
+  }
+}
+
+.reasons__left {
+  margin-right: auto;
+}
+
+.reasons__right {
+  padding-top: 3px;
+  flex-basis: 650px;
+}
+
+.reasons__title {
+  margin-bottom: 19px;
+  @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);
+  font-size: 48px;
+  line-height: 1.04;
+}
+
+.reasons__desc {  
+  font-size: 16px;
+  line-height: 1.88;
+
+  & + .reasons__desc {
+    margin-bottom: 35px;
+  }
+}
+
+.reasons__list {
+  @include flex-gap($gap: 23px 26px);
+  flex-wrap: wrap;
+}
+
+.reasons__item {
+  position: relative;
+  padding-left: 73px;
+  flex-basis: 312px;
+
+  &:nth-child(1) {
+    &::before {
+      position: absolute;
+      @include side-sizes(56px, 56px);
+      left: 0;      
+      content: '';
+      background-image: url('../images/reasons/icon-1.png');
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      position: absolute;
+      @include side-sizes(56px, 56px);
+      left: 0;
+      content: '';
+      background-image: url('../images/reasons/icon-2.png');
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      position: absolute;
+      @include side-sizes(56px, 56px);
+      left: 0;
+      content: '';
+      background-image: url('../images/reasons/icon-3.png');
+    }
+  }
+
+  &:nth-child(4) {
+    &::before {
+      position: absolute;
+      @include side-sizes(56px, 56px);
+      left: 0;
+      content: '';
+      background-image: url('../images/reasons/icon-4.png');
+    }
+  }
+}
+
+.reasons__subtitle {
+  margin-bottom: 2px;
+  @include font-normal($font-weight: 700, $color: $font-dark-color);
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.reasons__inside-desc { 
+  padding-left: 1px;
+  @include font-normal;
+  font-size: 15px;
+  line-height: 1.47;
+}
