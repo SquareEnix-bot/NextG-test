@@ -1,0 +1,73 @@
+.contacts {
+  background-color: $accent-color;
+}
+
+.contacts__list {  
+  display: flex;
+  gap: 273px;
+  align-items: center;  
+}
+
+.contacts__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+  }
+
+  &:nth-child(1) {
+    padding-left: 42px;    
+  
+    &::before {      
+      @include side-sizes(25.6px, 32px);      
+      background-image: url('../images/contacts/location.png');
+    }    
+  }
+
+  &:nth-child(2) {
+    padding-left: 46px;
+  
+    &::before {
+      @include side-sizes(32px, 32px);      
+      background-image: url('../images/contacts/phone.png');
+    }      
+  }
+
+  &:nth-child(3) {
+    padding-left: 46px;
+
+    &::before {
+      @include side-sizes(32px, 22.86px);
+      background-image: url('../images/contacts/mail.png');
+    }
+  }
+
+  &:nth-child(1), 
+  &:nth-child(2) {
+    &::after {
+        position: absolute;
+        margin-left: 136px;
+        @include side-sizes(1px, 52px);
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        background-color: $font-white-color;
+      }
+  }
+}
+
+.contacts__title {  
+  @include font-normal($font-family: 'Rubik', $font-weight: 500, $color: $font-dark-color);   
+  font-size: 20px;
+  line-height: 1.5;    
+}
+
+.contacts__link {
+  @include font-normal($color: $font-dark-color);
+  font-size: 15px;
+  line-height: 1.33;  
+}

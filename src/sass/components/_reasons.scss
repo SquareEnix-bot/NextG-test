@@ -39,42 +39,33 @@
   padding-left: 73px;
   flex-basis: 312px;
 
+  &::before {
+    position: absolute;
+    @include side-sizes(56px, 56px);
+    left: 0;
+    content: '';
+  }
+
   &:nth-child(1) {
-    &::before {
-      position: absolute;
-      @include side-sizes(56px, 56px);
-      left: 0;      
-      content: '';
+    &::before {      
       background-image: url('../images/reasons/icon-1.png');
     }
   }
 
   &:nth-child(2) {
-    &::before {
-      position: absolute;
-      @include side-sizes(56px, 56px);
-      left: 0;
-      content: '';
+    &::before {      
       background-image: url('../images/reasons/icon-2.png');
     }
   }
 
   &:nth-child(3) {
-    &::before {
-      position: absolute;
-      @include side-sizes(56px, 56px);
-      left: 0;
-      content: '';
+    &::before {      
       background-image: url('../images/reasons/icon-3.png');
     }
   }
 
   &:nth-child(4) {
-    &::before {
-      position: absolute;
-      @include side-sizes(56px, 56px);
-      left: 0;
-      content: '';
+    &::before {      
       background-image: url('../images/reasons/icon-4.png');
     }
   }
