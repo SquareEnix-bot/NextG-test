@@ -1,0 +1,120 @@
+.info {
+  .container {
+    display: flex;
+  }
+}
+
+.info__left {
+  position: relative;
+  flex-basis: calc(100% / 2);
+  background-image: url('../images/info/info-bg.jpg');
+
+  .info__text {    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 60px 30px 80px;
+    @include side-sizes(285px, 332px);
+    color: $font-white-color;
+    background-color: $blue-color;
+  }
+}
+
+.info__right {
+  max-width: 570px;
+}
+
+.info__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info__item {
+  &:nth-child(1) {
+    @extend %outline;
+  }
+
+  &:nth-child(2) {
+    background-color: $blue-color;
+    border-top-right-radius: 20px;
+
+    .info__text {
+      color: $font-white-color;
+    }
+  }
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    padding: 80px 30px 132px 30px;
+    max-width: 285px;
+  }
+
+  &:nth-child(3) {
+    padding: 45px 40px 52px 38px;
+    background-color: $accent-color;
+    border-bottom-right-radius: 20px;
+
+    .info__text {
+      margin-bottom: 28px;
+      color: $font-dark-color;
+    }
+  }
+}
+
+.info__text {
+  @include font-normal;  
+  font-size: 15px;
+  line-height: 1.6;  
+}
+
+.info__title {
+  margin-bottom: 5px;
+  @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);
+  font-size: 20px;
+  line-height: 1.5;  
+}
+
+.info__row {
+  @include flex-3in1($justify-content: flex-start);
+}
+
+.info__btn {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    @include side-sizes(1px, 46px);
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    background-color: $font-white-color;
+  }
+}
+
+.phone {
+  margin-left: 140px;
+  position: relative;  
+
+  &::before {
+    position: absolute;
+    @include side-sizes(46px, 46px);
+    left: -59px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    background-image: url('../images/info/info-phone.png');
+  }
+}
+
+.phone__caption {
+  @include font-normal($font-weight: 600, $color: $blue-color);  
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.phone__number {
+  @include font-normal($font-weight: 600, $color: $font-dark-color);
+  font-size: 24px;
+  line-height: 1;
+}
