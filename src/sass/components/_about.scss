@@ -5,10 +5,7 @@
 .about__item {
   @include flex-3in1($justify-content: space-between);
   flex-basis: 50%;
-
-  &:not(last-child) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 80px;  
 
   &:nth-child(odd) {
     flex-direction: row-reverse

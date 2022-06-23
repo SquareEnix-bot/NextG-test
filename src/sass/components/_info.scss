@@ -19,7 +19,7 @@
 .info__left {
   position: relative;
   flex-basis: calc(100% / 2);
-  background-image: url('../images/info/info-bg.jpg');
+  background-image: url('../images/info/info-bg.jpg');  
 
   .info__text {    
     position: absolute;
@@ -33,7 +33,7 @@
 }
 
 .info__right {  
-  max-width: 570px;  
+  flex-basis: calc(100% / 2);
 }
 
 .info__list {
@@ -62,12 +62,12 @@
   }
 
   &:nth-child(3) {
-    padding: 45px 40px 52px 38px;
+    padding: 45px 40px 42px 38px;
     background-color: $accent-color;
     border-bottom-right-radius: 20px;
 
     .info__text {
-      margin-bottom: 28px;
+      margin-bottom: 26px;
       color: $font-dark-color;
     }
   }
@@ -76,7 +76,7 @@
 .info__text {
   @include font-normal;  
   font-size: 15px;
-  line-height: 1.6;  
+  line-height: 1.73;  
 }
 
 .info__title {

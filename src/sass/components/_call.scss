@@ -1,5 +1,10 @@
+.call {
+  padding-top: 88px;
+  padding-bottom: 120px;
+}
+
 .call__title {
-  margin-bottom: 19px;
+  margin-bottom: 19px;  
   @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);
   font-size: 48px;
   line-height: 1.04;
@@ -10,7 +15,7 @@
   margin: 0 auto 35px;
   max-width: 664px;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: 1.75;
   text-align: center;
 }
 

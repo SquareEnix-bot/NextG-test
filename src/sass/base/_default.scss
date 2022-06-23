@@ -24,8 +24,13 @@ body {
   // }
 }
 
+.logo {
+  @include side-sizes(161px, 40px);
+  background-color: $place-logo-color;
+}
+
 .btn {  
-  padding: 9px 24px;
+  padding: 7px 23px; // + 1px border
   @include font-normal($font-family: 'Rubik', $font-weight: 500, $color: $font-white-color);
   font-size: 14px;
   line-height: 2.14;
