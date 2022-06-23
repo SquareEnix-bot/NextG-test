@@ -30,14 +30,26 @@
           </p>
         </div>
         <div class="about__left">
-          <!-- TODO адаптувати зображення -->
-          <img
-            class="about__img-1"
-            width="570"
-            height="616"
-            src="./images/about/about-1-bg.png"
-            alt="girl in a protective mask"
-          />
+          <picture class="about__img-1">
+            <source
+              srcset="
+                ./images/about/about-1-bg.webp    1x,
+                ./images/about/about-1-bg@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/about/about-1-bg.png    1x,
+                ./images/about/about-1-bg@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              src="./images/about/about-1-bg.png"
+              alt="doctor in a protective mask"
+            />
+          </picture>
         </div>
       </li>
       <li class="about__item">
@@ -65,14 +77,26 @@
           </p>
         </div>
         <div class="about__left">
-          <!-- TODO адаптувати зображення -->
-          <img
-            class="about__img-2"
-            width="570"
-            height="620"
-            src="./images/about/about-2-bg.png"
-            alt="girl in a protective mask"
-          />
+          <picture class="about__img-1">
+            <source
+              srcset="
+                ./images/about/about-2-bg.webp    1x,
+                ./images/about/about-2-bg@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/about/about-2-bg.png    1x,
+                ./images/about/about-2-bg@2x.png 2x
+              "
+              type="image/png"
+            />
+            <img
+              src="./images/about/about-2-bg.png"
+              alt="man in a protecive mask"
+            />
+          </picture>
         </div>
       </li>
     </ul>

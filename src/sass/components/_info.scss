@@ -19,7 +19,8 @@
 .info__left {
   position: relative;
   flex-basis: calc(100% / 2);
-  background-image: url('../images/info/info-bg.jpg');  
+
+  @include bgimg('../images/info/info-bg', 'jpg');   
 
   .info__text {    
     position: absolute;
@@ -57,8 +58,8 @@
 
   &:nth-child(1),
   &:nth-child(2) {
-    padding: 80px 30px 132px 30px;
-    max-width: 285px;
+    padding: 80px 30px 132px 30px;    
+    flex-basis: 285px;
   }
 
   &:nth-child(3) {
@@ -115,7 +116,7 @@
     top: 50%;
     transform: translateY(-50%);
     content: '';
-    background-image: url('../images/info/info-phone.png');
+    @include bgimg('../images/info/info-phone', 'png');    
   }
 }
 

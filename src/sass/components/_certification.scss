@@ -33,18 +33,18 @@
   &:nth-child(1) {
     .certification__link {
       @include side-sizes(66.78px, 80px);
-      background-image: url('../images/certification/fda.png');
+      @include bgimg('../images/certification/fda', 'png');
     }
   }
 
   &:nth-child(2) {
     @include side-sizes(126.01px, 80px);
-    background-image: url('../images/certification/nelson.png');
+    @include bgimg('../images/certification/nelson', 'png');
   }
 
   &:nth-child(3) {
     @include side-sizes(104.82px, 80px);
-    background-image: url('../images/certification/cnas.png');
+    @include bgimg('../images/certification/cnas', 'png');
   }
 }
 
