@@ -49,26 +49,26 @@
   }
 
   &:nth-child(1) {
-    &::before {      
-      background-image: url('../images/reasons/icon-1.png');
+    &::before {
+      @include bgimg('../images/reasons/icon-1', 'png');
     }
   }
 
   &:nth-child(2) {
-    &::before {      
-      background-image: url('../images/reasons/icon-2.png');
+    &::before {
+      @include bgimg('../images/reasons/icon-2', 'png');
     }
   }
 
   &:nth-child(3) {
-    &::before {      
-      background-image: url('../images/reasons/icon-3.png');
+    &::before {   
+      @include bgimg('../images/reasons/icon-3', 'png');
     }
   }
 
   &:nth-child(4) {
-    &::before {      
-      background-image: url('../images/reasons/icon-4.png');
+    &::before {     
+      @include bgimg('../images/reasons/icon-4', 'png');
     }
   }
 }

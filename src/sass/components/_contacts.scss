@@ -25,8 +25,8 @@
     padding-left: 42px;    
   
     &::before {      
-      @include side-sizes(25.6px, 32px);      
-      background-image: url('../images/contacts/location.png');
+      @include side-sizes(25.6px, 32px);  
+      @include bgimg('../images/contacts/location', 'png');    
     }    
   }
 
@@ -34,8 +34,8 @@
     padding-left: 46px;
   
     &::before {
-      @include side-sizes(32px, 32px);      
-      background-image: url('../images/contacts/phone.png');
+      @include side-sizes(32px, 32px); 
+      @include bgimg('../images/contacts/phone', 'png');     
     }      
   }
 
@@ -44,7 +44,7 @@
 
     &::before {
       @include side-sizes(32px, 22.86px);
-      background-image: url('../images/contacts/mail.png');
+      @include bgimg('../images/contacts/mail', 'png');
     }
   }
 

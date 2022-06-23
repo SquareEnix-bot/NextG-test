@@ -1,13 +1,26 @@
 <section class="reasons">
   <div class="container">
     <div class="reasons__left">
-      <img
-        class="reasons__img"
-        width="400"
-        height="630"
-        src="./images/reasons/left-bg.png"
-        alt="protective mask"
-      />
+      <picture class="reasons__img">
+        <source
+          srcset="
+            ./images/reasons/left-bg.webp    1x,
+            ./images/reasons/left-bg@2x.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/reasons/left-bg.png    1x,
+            ./images/reasons/left-bg@2x.png 2x
+          "
+          type="image/png"
+        />
+        <img
+          src="./images/reasons/left-bg.png"
+          alt="girl in a protective mask"
+        />
+      </picture>
     </div>
     <div class="reasons__right">
       <h2 class="reasons__title">Reasons To Choose Our Products</h2>
