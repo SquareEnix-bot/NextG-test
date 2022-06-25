@@ -2,23 +2,66 @@
   padding-top: 73px;  
   background-color: $footer-bg;  
 
+  @include mq(tablet-only) {
+    padding-top: 43px;
+  }
+
+  @include mq(mobile-only) {
+    padding-top: 23px;
+  }
+
   .container {
     padding-bottom: 58px;
+
+    @include mq(tablet-only) {
+      padding-top: 38px;
+    }
+
+    @include mq(mobile-only) {
+      padding-bottom: 18px;
+    }
   }
 }
 
 .footer__container {
-  @include flex-gap($gap: 299px)
+  @include flex-3in1($justify-content: space-around);
+  flex-wrap: wrap;
+
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+    gap: 299px;
+  }  
+}
+
+.footer__wrapper {
+  &:nth-child(2) {
+    @include mq(small-mobile) {
+      display: none;
+    }
+  } 
 }
 
 .footer__logo {
   margin-bottom: 33px;
+
+  @include mq(mobile-only) {
+    margin-bottom: 13px;
+  }
 }
 
 .footer__text {
   @include font-normal;
   font-size: 15px;
   line-height: 1.6;  
+
+  @include mq(mobile-only) {
+    font-size: 12px;
+    margin-bottom: 23px;
+  }  
+
+  @include mq(tablet-only) {
+    margin-bottom: 33px;
+  }
 }
 
 .footer__title {
@@ -60,6 +103,16 @@
   padding-top: 32px;
   padding-bottom: 30px;
   border-top: 1px solid $copy-border-color;    
+
+  @include mq(tablet-only) {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+  
+  @include mq(mobile-only) {
+    padding-top: 12px;
+    padding-bottom: 10px;
+  }
 }
 
 .footer__copyright {  

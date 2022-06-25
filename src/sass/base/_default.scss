@@ -1,27 +1,18 @@
 body {
-  @include font-normal; 
+  @include font-normal;   
 }
-
 
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  min-width: 320px;
-  width: 1170px;
-  
+  min-width: 290px;
+  max-width: 1170px;   
 
-  @extend %outline;
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
+  @include mq (tablet-only) {
+    width: 768px;
+  }
 
-  // @media screen and (min-width: 768px) {
-  //   width: 768px;
-  // }
-
-  // @media screen and (min-width: 1280px) {
-  //   width: 1170px;
-  // }
+  // @extend %outline;  
 }
 
 .logo {
@@ -82,9 +73,12 @@ body {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.overflow-hidden {
   overflow: hidden;
 }

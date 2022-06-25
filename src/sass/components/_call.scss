@@ -1,6 +1,16 @@
 .call {
   padding-top: 88px;
   padding-bottom: 120px;
+
+  @include mq(tablet-only) {
+    padding-top: 66px;
+    padding-bottom: 80px;
+  }
+  
+  @include mq(mobile-only) {
+    padding-top: 33px;
+    padding-bottom: 40px;
+  }
 }
 
 .call__title {
@@ -9,6 +19,14 @@
   font-size: 48px;
   line-height: 1.04;
   text-align: center;
+
+  @include mq(tablet-only) {
+    font-size: 38px;
+  }
+  
+  @include mq(mobile-only) {
+    font-size: 28px;
+  }
 }
 
 .call__text {
@@ -17,6 +35,14 @@
   font-size: 16px;
   line-height: 1.75;
   text-align: center;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+  }
+  
+  @include mq(mobile-only) {
+    font-size: 12px;
+  }  
 }
 
 .call__btn {
