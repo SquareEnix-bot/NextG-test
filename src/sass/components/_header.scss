@@ -1,26 +1,76 @@
-.header {    
-  padding-top: 20px;
-  padding-bottom: 81px;  
-  background-color: $section-bg;  
+.header {  
+  background-color: $section-bg;
+  
+  @include mq(tablet) {
+    padding-top: 20px;
+    padding-bottom: 81px;          
+  }   
 
-  &::after {
-    position: absolute;
-    right: 0;
-    top: 0;    
-    content: '';
-    @include side-sizes(927px, 891px);        
-    max-width: 48%;       
-    @include bgimg('../images/header/header-bg', 'png');          
+  @include mq(desktop) {
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      @include side-sizes(927px, 891px);
+      max-width: 48%;
+      @include bgimg('../images/header/header-bg', 'png');
     }
+  }
+}
 
-  .container {
-    @include flex-3in1;    
+.header__menu {
+  @include flex-3in1;
+
+  @include mq(mobile-only) {
+    padding: 20px 0;        
   }  
 }
 
 .header__logo {
   margin-right: auto;
-  z-index: 1;  
+  z-index: 101;  
+}
+
+.burger {
+  z-index: 101;
+  background-color: transparent;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  @include side-sizes(40px, 40px);
+}
+
+.burger__icon-open {
+  visibility: visible;
+  opacity: 1;
+
+  .burger.burger--active & {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.burger__icon-close {
+  .burger.burger--active & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .burger & {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.header__nav {
+  @include mq (mobile-only) {
+    display: none;
+  }
 }
 
 .nav {
@@ -29,28 +79,67 @@
 }
 
 .nav__list {
-  @include flex-gap($gap: 45px);
-  z-index: 10;
+  @include mq(tablet) {
+    @include flex-gap($gap: 15px);    
+  }
+
+  @include mq(desktop) {
+    gap: 45px;
+    z-index: 10;
+  }  
 }
 
-// TODO додати анімашку, можлм=иво риску під назвою
-
 .nav__link {
-  padding-top: 30px;
-  padding-bottom: 90px;
-  
-  @include font-normal;
-  font-size: 16px;
-  line-height: 1.875;
-
+  @include font-normal($font-weight:500);
+  font-size: 30px;
+  line-height: 2;
   transition: color $time-function;
 
   &:hover,
   &:focus {
     color: $font-dark-color;
   }
+
+  @include mq(tablet) {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    font-size: 16px;
+    line-height: 1.875;
+  }
 }
 
-.header__btn {
-  z-index: 1;
+.header__btn {  
+  z-index: 101;
+
+  @include mq (mobile-only) {
+    display: none;
+  }
+}
+
+.mobile {
+  @include mq(mobile-only) {
+    position: absolute;
+    top: -100vh;
+    left: 0;    
+    @include side-sizes(100vw, 100vh);
+    padding: 90px 20px;
+    background-color: $section-bg;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: $time-function;
+
+    z-index: 100;
+    
+    &--active {
+      top: 0;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+    }    
+  }  
+
+  @include mq(tablet) {
+    display: none;
+  }
 }

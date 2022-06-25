@@ -1,12 +1,33 @@
 .advantages {
-  background-color: $section-bg;
-
   padding-top: 72px;
   padding-bottom: 73px;
+  background-color: $section-bg;  
+
+  @include mq (small-mobile) {
+      padding-top: 22px;
+      padding-bottom: 23px;
+    }
+
+    @include mq (tablet-only) {
+      padding-top: 52px;
+      padding-bottom: 53px;
+    }
 }
 
-.advantages__list {  
+.advantages__list {    
   @include flex-gap($gap: 30px);
+
+  @include mq (small-mobile) {
+    gap: 15px;
+  }
+
+  @include mq (tablet-only) {
+    gap: 25px;
+  }
+
+  @include mq(notDesktop) {
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__item {
@@ -60,5 +81,9 @@
 .advantages__desk {
   @include font-normal();  
   font-size: 15px;
-  line-height: 1.47;  
+  line-height: 1.47;
+  
+  @include mq (small-mobile) {
+    display: none;
+  }
 }

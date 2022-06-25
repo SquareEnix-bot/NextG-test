@@ -1,4 +1,9 @@
 .reviews__bg {
-  height: 475px;
-  @include bgimg('../images/reviews', 'png');
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+    height: 475px;
+    @include bgimg('../images/reviews', 'png');
+  }  
 }

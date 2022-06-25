@@ -1,25 +1,67 @@
-<header class="header">
+<header class="header" id="home">
   <div class="container">
-    <div class="header__logo logo"></div>
-    <nav class="header__nav nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#" class="nav__link">Home</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">About</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Product</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Contact</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">History</a>
-        </li>
-      </ul>
-    </nav>
-    <button class="header__btn btn btn--blue" type="button">Contact us</button>
+    <div class="header__menu">
+      <div class="header__logo logo"></div>
+      <button
+        class="burger"
+        data-menu-button
+        type="button"
+        aria-label="button mobile menu"
+      >
+        <svg class="burger__icon">
+          <use
+            class="burger__icon-open"
+            href="./images/icons.svg#open-menu"
+          ></use>
+          <use
+            class="burger__icon-close"
+            href="./images/icons.svg#close-menu"
+          ></use>
+        </svg>
+      </button>
+      <nav class="header__nav nav scrollto">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#product" class="nav__link">Product</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="#info" class="nav__link">History</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__btn btn btn--blue" type="button">
+        Contact us
+      </button>
+    </div>
+    <div class="mobile" data-menu>
+      <nav class="mobile__nav nav scrollto">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#product" class="nav__link">Product</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="#info" class="nav__link">History</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>

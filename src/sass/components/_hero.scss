@@ -2,26 +2,51 @@
   background-color: $section-bg;
 
   .flex-container {
-    display: flex;
+    @include mq(mobile) {
+      display: flex;
+      justify-content: center;
+    }    
   }   
 }
 
-.hero__left {
-  padding-top: 157px;
-  max-width: 555px;
+.hero__left {  
+  padding-top: 30px;
+  padding-right: 10px;
+
+  @include mq(tablet) {
+    max-width: 60%;
+  }    
+
+  @include mq(desktop) {
+    padding-top: 157px;
+    max-width: 555px;
+  }
 }
 
 .hero__right {
   margin-left: auto;
   z-index: 1;
+  
+
+  @include mq(small-mobile) {
+    display: none;
+  }  
+
+  @include mq(notDesktop) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  @include mq(desktop) {
+    margin-left: 88px;
+  }
 }
 
 .hero__subtitle {
   margin-bottom: 30px;
   @include font-normal($font-family: 'Rubik', $font-weight: 500, $color: $accent-color);    
   font-size: 14px;
-  line-height: 2.14;
-  
+  line-height: 2.14;  
 }
 
 .hero__title {
@@ -29,6 +54,14 @@
   @include font-normal($font-family: 'Rubik', $font-weight: 700, $color: $font-dark-color);    
   font-size: 72px;
   line-height: 1.14;  
+
+  @include mq(tablet-only) {
+    font-size: 52px;
+  }
+
+  @include mq(mobile-only) {
+    font-size: 32px;
+  }   
 }
 
 .hero__desc {
@@ -36,6 +69,14 @@
   @include font-normal($color: $font-dark-color);  
   font-size: 16px;
   line-height: 1.5;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+  }
+
+  @include mq(mobile-only) {
+    font-size: 12px;
+  }  
 }
 
 .hero__btns {
